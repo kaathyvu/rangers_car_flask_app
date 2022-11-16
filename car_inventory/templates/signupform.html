@@ -1,0 +1,26 @@
+<form method="POST">
+    {{ signupform.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="email-field">
+            {{ signupform.email.label }}
+            {{ signupform.email(class="form-control", placeholder="Enter Email")}}
+        </fieldset>
+
+        <fieldset id="first-field">
+            {{ signupform.first_name.label }}
+            {{ signupform.first_name(class="form-control", placeholder="Enter First Name")}}
+        </fieldset>
+
+        <fieldset id="last_field">
+            {{ signupform.last_name.label }}
+            {{ signupform.last_name(class="form-control", placeholder="Enter Last Name")}}
+        </fieldset>
+
+        <fieldset id="pass-field">
+            {{ signupform.password.label }}
+            {{ signupform.password(class="form-control", placeholder="Enter Password")}}
+        </fieldset>
+
+        {{ signupform.submit_button(class="btn btn-secondary btn-block") }}
+    </div>
+</form>

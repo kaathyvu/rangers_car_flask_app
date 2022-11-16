@@ -1,0 +1,136 @@
+/*Nav Styles */
+body {
+    font-family: helvetica;
+}
+.ct-nav{
+    display: flex;
+    justify-content:center;
+}
+
+/* Target Main Logo Image */
+.ct-nav img{
+    width: 20%;
+    max-width: 100%;
+    margin-left: 5vw;
+}
+
+ul#nav-list{
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+}
+
+ul#nav-list li, ul#nav-list a{
+    display:inline;
+    text-decoration:none;
+    padding: 0.75vw;
+    color:black;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing:1px;
+}
+
+ul#nav-list li:hover, ul#nav-list a:hover{
+    display:inline;
+    text-decoration:none;
+    padding: 0.75vw;
+    color:gray;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing:1px;
+}
+/* End of Nav Styles */
+
+/* Start of Hero/Header Section */
+#header-text{
+    padding: 2vw;
+    padding-top: 4vw;
+}
+
+.header-image{
+    width: 100%;
+    max-width: 100%;
+}
+/* End of Hero/Header Section */
+
+/* Start of Middle Section Styles */
+#middle-text{
+    text-align: center;
+    padding: 10vh;
+}
+
+/* End of Middle Section Styles */
+
+/* Start of Features Section Styles */
+#walking-image,#hearts-image,#good-image{
+    width:85%;
+    max-width: 100%;
+    margin-bottom: 5vh;
+}
+
+#features-section{
+    margin: 2vw 8vw 2vw 8vw;
+}
+/* End of Features Section */
+
+
+/* Footer Section Styles */
+.footer-text-flex{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+.footer-text-flex a{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+    font-size:11px;
+    letter-spacing: 1px;
+}
+
+.footer-text-flex a:hover{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:gray;
+    font-size:11px;
+    letter-spacing: 1px;
+}
+
+#footer-logo{
+    width:100%;
+    max-width:100%;
+    margin-top:3vw;
+}
+
+#footer{
+    border-top: 3px solid black;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+}
+
+/* Profile Styles */
+.hero-section{
+    height: 95vh;
+    background-image: url(../images/undraw_Relaxing_walk_re_7fko.png);
+    background-size: cover;
+    background-position: 35% 50%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path:polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+}
+
+.header-text{
+    display:flex;
+    justify-content: center;
+    padding-top: 16%;
+    left: 20rem;
+    top: 10rem;
+    color: black;
+}

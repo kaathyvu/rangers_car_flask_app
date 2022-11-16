@@ -1,0 +1,16 @@
+<form method="POST">
+    {{ signinform.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="email-field">
+            {{ signinform.email.label }}
+            {{ signinform.email(class="form-control", placeholder="Enter Email")}}
+        </fieldset>
+
+        <fieldset id="pass-field">
+            {{ signinform.password.label }}
+            {{ signinform.password(class="form-control", placeholder="Enter Password")}}
+        </fieldset>
+
+        {{ signinform.submit_button(class="btn btn-secondary btn-block") }}
+    </div>
+</form>
