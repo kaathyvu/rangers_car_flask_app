@@ -20,7 +20,7 @@ def signup():
             db.session.add(user)
             db.session.commit()
 
-            flash(f"You have successfully created a user account: {email}")
+            flash(f"You have successfully created a user account: {email}", "user-created")
             return redirect(url_for('auth.signin'))
     except:
         raise Exception("Invalid form data. Please check your form.")
@@ -34,12 +34,12 @@ def signin():
             email = signinform.email.data
             password = signinform.password.data
 
-            logged_user = User.query.filter(User.email == email). first()
+            logged_user = User.query.filter(User.email == email).first()
             if logged_user and check_password_hash(logged_user.password, password):
                 login_user(logged_user)
             
                 flash(f"You have successfully logged in.", 'auth-success')
-                return redirect(url_for('site.home'))
+                return redirect(url_for('site.profile'))
             
             else:
                 flash("Your email or password was entered incorrectly. Please try again.", "auth-failed")
@@ -48,3 +48,9 @@ def signin():
         raise Exception("Invalid form data. Please try again.")
 
     return render_template("signin.html", signinform=signinform)
+
+@auth.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('site.home'))
